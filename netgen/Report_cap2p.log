@@ -1,0 +1,36 @@
+
+Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_TRJMDT in circuit cap2p_lay (1)(1 instance)
+
+Class cap2p_lay (1):  Merged 9 parallel devices.
+Subcircuit summary:
+Circuit 1: cap_2p                          |Circuit 2: cap2p_lay                       
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_1 (10->1)         |sky130_fd_pr__cap_mim_m3_1 (10->1)         
+Number of devices: 1                       |Number of devices: 1                       
+Number of nets: 2                          |Number of nets: 2                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: cap_2p                          |Circuit 2: cap2p_lay                       
+-------------------------------------------|-------------------------------------------
+B                                          |B                                          
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_2p and cap2p_lay are equivalent.
+
+Final result: Circuits match uniquely.
+.

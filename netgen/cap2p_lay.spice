@@ -1,0 +1,19 @@
+* NGSPICE file created from cap2p_lay.ext - technology: sky130A
+
+.subckt sky130_fd_pr__cap_mim_m3_1_TRJMDT C2_0 C1_0 C2_1 C1_1
+X0 C1_1 C2_1 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X1 C1_1 C2_1 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X2 C1_0 C2_0 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X3 C1_1 C2_1 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X4 C1_0 C2_0 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X5 C1_0 C2_0 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X6 C1_1 C2_1 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X7 C1_0 C2_0 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X8 C1_0 C2_0 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+X9 C1_1 C2_1 sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+.ends
+
+.subckt cap2p_lay A B
+Xsky130_fd_pr__cap_mim_m3_1_TRJMDT_0 B A B A sky130_fd_pr__cap_mim_m3_1_TRJMDT
+.ends
+

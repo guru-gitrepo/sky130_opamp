@@ -1,0 +1,22 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1790486392
+<< metal4 >>
+rect -5100 -6960 -2006 -6958
+rect -5208 -7062 -2006 -6960
+rect -5208 -7584 -5104 -7062
+rect -2110 -7592 -2006 -7062
+rect -3868 -19856 -3764 -19376
+rect -764 -19856 -657 -19347
+rect -3869 -19963 -657 -19856
+use sky130_fd_pr__cap_mim_m3_1_TRJMDT  sky130_fd_pr__cap_mim_m3_1_TRJMDT_0
+timestamp 1790486274
+transform 1 0 -3431 0 1 -13480
+box -2765 -6000 2765 6000
+<< labels >>
+flabel metal4 -3990 -7060 -3750 -6960 0 FreeSans 1600 0 0 0 A
+port 1 nsew
+flabel metal4 -1890 -19960 -1670 -19860 0 FreeSans 1600 0 0 0 B
+port 3 nsew
+<< end >>

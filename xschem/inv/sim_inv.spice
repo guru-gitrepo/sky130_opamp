@@ -1,0 +1,38 @@
+** sch_path: /home/guru/sky130_oscillator/xschem/inv/sim_inv.sch
+**.subckt sim_inv
+x1 vdd vin vout vss inv
+V1 vdd 0 1.8
+V2 vin 0 0
+V3 vss 0 0
+C1 vout 0 10f
+**** begin user architecture code
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.control
+dc V2 0 1.8 0.01
+plot v(vout)
+let i_d=abs(i(V1))
+plot i_d
+meas dc VSP when v(vin)=v(vout)
+meas dc IMAX max i_d
+print VSP IMAX >> inv_char.txt
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  inv.sym # of pins=4
+** sym_path: /home/guru/sky130_oscillator/xschem/inv/inv.sym
+** sch_path: /home/guru/sky130_oscillator/xschem/inv/inv.sch
+.subckt inv vdd x y vss
+*.ipin vdd
+*.ipin vss
+*.ipin x
+*.opin y
+XM1 y x vdd vdd sky130_fd_pr__pfet_01v8_lvt L=0.5 W=1.2 nf=1 ad=0.348 as=0.348 pd=2.98 ps=2.98 nrd=0.241666666666667
++ nrs=0.241666666666667 sa=0 sb=0 sd=0 mult=1
+XM2 y x vss vss sky130_fd_pr__nfet_01v8_lvt L=0.5 W=0.5 nf=1 ad=0.145 as=0.145 pd=1.58 ps=1.58 nrd=0.58 nrs=0.58 sa=0 sb=0 sd=0
++ mult=1
+.ends
+
+.end
