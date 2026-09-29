@@ -14,16 +14,22 @@ N -30 -200 -30 -150 {lab=vdd}
 N -50 -200 -50 -150 {lab=en}
 N -50 -50 -50 0 {lab=ib}
 N -30 -50 -30 0 {lab=vss}
-N -140 -120 -90 -120 {lab=vp}
+N -140 -120 -90 -120 {lab=#net1}
 N 20 -100 70 -100 {lab=vout}
-N -140 -80 -90 -80 {lab=vout}
-N -140 -80 -140 30 {lab=vout}
-N -140 30 50 30 {lab=vout}
+N -140 -80 -90 -80 {lab=#net2}
+N -140 -80 -140 30 {lab=#net2}
 N 50 -100 50 30 {lab=vout}
 N 60 90 60 140 {lab=vp}
 N 160 90 160 140 {lab=ib}
 N 70 -100 170 -100 {lab=vout}
 N 170 -100 170 -80 {lab=vout}
+N -140 30 -140 40 {lab=#net2}
+N -140 40 -80 40 {lab=#net2}
+N -20 40 50 40 {lab=vout}
+N 50 30 50 40 {lab=vout}
+N -240 -80 -240 -70 {lab=#net2}
+N -240 -80 -140 -80 {lab=#net2}
+N -210 -120 -200 -120 {lab=vp}
 C {opamp.sym} -10 -90 0 0 {name=x1}
 C {vsource.sym} -180 170 0 0 {name=V1 value=\{vvdd\} savecurrent=false}
 C {title.sym} -390 270 0 0 {name=l1 author="Stefan Schippers"}
@@ -43,7 +49,7 @@ C {gnd.sym} 160 200 0 0 {name=l6 lab=0}
 C {lab_wire.sym} 160 90 0 0 {name=p5 sig_type=std_logic lab=ib}
 C {lab_wire.sym} -30 -200 0 1 {name=p6 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} -50 -200 0 0 {name=p7 sig_type=std_logic lab=en}
-C {lab_wire.sym} -140 -120 0 0 {name=p8 sig_type=std_logic lab=vp}
+C {lab_wire.sym} -210 -120 0 0 {name=p8 sig_type=std_logic lab=vp}
 C {lab_wire.sym} -50 0 2 1 {name=p9 sig_type=std_logic lab=ib}
 C {lab_wire.sym} -30 0 2 0 {name=p10 sig_type=std_logic lab=vss}
 C {capa.sym} 170 -50 0 0 {name=CL
@@ -55,9 +61,21 @@ C {gnd.sym} 170 -20 0 0 {name=l7 lab=0}
 C {lab_wire.sym} 170 -100 0 1 {name=p11 sig_type=std_logic lab=vout}
 C {code_shown.sym} 280 -80 0 0 {name=Spice only_toplevel=false value=
 "
-.include opamp_op_tt.sp
-*.include opmap_op_ss.sp
-*.include opamp_op_ff.sp
-*.include opamp_op_sf.sp
-*.include opamp_op_fs.sp
+.include opamp_stb_tt.sp
+*.include opamp_stb_ss.sp
+*.include opamp_stb_ff.sp
+*.include opamp_stb_sf.sp
+*.include opamp_stb_fs.sp
 "}
+C {res.sym} -50 40 1 0 {name=R1
+value=1G
+footprint=1206
+device=resistor
+m=1}
+C {capa.sym} -240 -40 0 0 {name=C1
+m=1
+value=100
+footprint=1206
+device="ceramic capacitor"}
+C {gnd.sym} -240 -10 0 0 {name=l8 lab=0}
+C {vsource.sym} -170 -120 1 1 {name=V5 value=ac=1 savecurrent=false}

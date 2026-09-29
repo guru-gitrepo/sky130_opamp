@@ -95,7 +95,7 @@ let xm8_rds   = 1/(@m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gds])
 let xm8_mar   = xm8_vds - xm8_vdsat
 
 *------------Other values------
-echo "MOS,VGS,VDS,VGD,VDSAT,ID,GM,VTH,MARGIN,rdp,VREF,IQ,Vin,Temp,TT" > opamp_op.csv
+echo "MOS,VGS,VDS,VGD,VDSAT,ID,GM,VTH,MARGIN,rdp,VOUT,IQ,Vin,Temp,TT" > opamp_op.csv
 echo "M1,$&xm1_vgs $&xm1_vds $&xm1_vgd $&xm1_vdsat $&xm1_id $&xm1_gm $&xm1_vth $&xm1_mar $&xm1_rds  $&v(vout) $&i(V2) $&v(vdd) $temp" >> opamp_op.csv  
 echo "M2,$&xm2_vgs $&xm2_vds $&xm2_vgd $&xm2_vdsat $&xm2_id $&xm2_gm $&xm2_vth $&xm2_mar $&xm2_rds" >> opamp_op.csv
 echo "M3,$&xm3_vgs $&xm3_vds $&xm3_vgd $&xm3_vdsat $&xm3_id $&xm3_gm $&xm3_vth $&xm3_mar $&xm3_rds" >> opamp_op.csv

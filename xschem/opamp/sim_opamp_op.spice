@@ -1,5 +1,5 @@
-** sch_path: /home/guru/Projects/sky130_opamp/xschem/opamp/sim_op_opamp.sch
-**.subckt sim_op_opamp
+** sch_path: /home/guru/Projects/sky130_opamp/xschem/opamp/sim_opamp_op.sch
+**.subckt sim_opamp_op
 x1 vdd vss vout vp vout ib en opamp
 V1 vdd 0 {vvdd}
 V2 vss 0 0
@@ -10,8 +10,8 @@ CL vout 0 10p
 **** begin user architecture code
 
 
-.include opamp_op_tt.sp
-*.include opmap_op_ss.sp
+*.include opamp_op_tt.sp
+*.include opamp_op_ss.sp
 *.include opamp_op_ff.sp
 *.include opamp_op_sf.sp
 *.include opamp_op_fs.sp
