@@ -1,5 +1,27 @@
+** sch_path: /home/guru/Projects/sky130_opamp/xschem/opamp/sim_opamp_startup.sch
+**.subckt sim_opamp_startup
+x1 vdd vss vout vp vout ib en opamp
+V1 vdd 0 pulse(0 {vvdd} 0 {tr} 1u 1 2)
+V2 vss 0 0
+V3 en 0 {vvdd}
+V4 vp 0 {vvdd/2}
+I0 ib 0 5u
+CL vout 0 10p
+**** begin user architecture code
+
+
+.include opamp_startup_tt.sp
+*.include opamp_startup_ss.sp
+*.include opamp_startup_ff.sp
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  opamp.sym # of pins=7
+** sym_path: /home/guru/Projects/sky130_opamp/xschem/opamp/opamp.sym
 ** sch_path: /home/guru/Projects/sky130_opamp/xschem/opamp/opamp.sch
-**.subckt opamp vdd vss vout vp vm ib_5ua en
+.subckt opamp vdd vss vout vp vm ib_5ua en
 *.ipin vdd
 *.ipin vss
 *.ipin vm
@@ -42,7 +64,8 @@ XCC[3] net3 vout sky130_fd_pr__cap_mim_m3_2 W=10 L=10 MF=1
 XCC[2] net3 vout sky130_fd_pr__cap_mim_m3_2 W=10 L=10 MF=1
 XCC[1] net3 vout sky130_fd_pr__cap_mim_m3_2 W=10 L=10 MF=1
 XCC[0] net3 vout sky130_fd_pr__cap_mim_m3_2 W=10 L=10 MF=1
-**.ends
+.ends
+
 
 * expanding   symbol:  /home/guru/Projects/sky130_opamp/xschem/inv/inv.sym # of pins=4
 ** sym_path: /home/guru/Projects/sky130_opamp/xschem/inv/inv.sym

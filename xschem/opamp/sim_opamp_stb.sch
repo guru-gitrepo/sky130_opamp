@@ -6,7 +6,8 @@ S {}
 F {}
 E {}
 L 4 -100 -230 30 -230 {}
-T {Testbench setup} -100 -260 0 0 0.4 0.4 {}
+L 4 30 -230 120 -230 {}
+T {Testbench setup for Stability} -100 -260 0 0 0.4 0.4 {}
 N -180 90 -180 140 {lab=vdd}
 N -100 90 -100 140 {lab=vss}
 N -20 90 -20 140 {lab=en}
@@ -61,7 +62,7 @@ C {gnd.sym} 170 -20 0 0 {name=l7 lab=0}
 C {lab_wire.sym} 170 -100 0 1 {name=p11 sig_type=std_logic lab=vout}
 C {code_shown.sym} 280 -80 0 0 {name=Spice only_toplevel=false value=
 "
-.include opamp_stb_tt.sp
+*.include opamp_stb_tt.sp
 *.include opamp_stb_ss.sp
 *.include opamp_stb_ff.sp
 *.include opamp_stb_sf.sp

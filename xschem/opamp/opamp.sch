@@ -290,5 +290,5 @@ C {lab_wire.sym} 1870 -1240 0 0 {name=p23 sig_type=std_logic lab=enb}
 C {lab_wire.sym} 2120 -1240 0 0 {name=p24 sig_type=std_logic lab=enb}
 C {lab_wire.sym} 1510 -1440 0 0 {name=p25 sig_type=std_logic lab=enb}
 C {lab_wire.sym} 1680 -1720 0 0 {name=p26 sig_type=std_logic lab=en}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 2220 -1430 3 1 {name=CC model=cap_mim_m3_2 W=10 L=10 m=8 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 2220 -1430 3 1 {name=CC[9:0] model=cap_mim_m3_2 W=10 L=10 m=8 spiceprefix=X}
 C {title.sym} 1510 -1120 0 0 {name=l1 author="Stefan Schippers"}
