@@ -1,18 +1,18 @@
-** sch_path: /home/guru/Projects/sky130_opamp/xschem/opamp/sim_opamp_startup.sch
-**.subckt sim_opamp_startup
+** sch_path: /home/guru/Projects/sky130_opamp/xschem/opamp/sim_opamp_enable.sch
+**.subckt sim_opamp_enable
 x1 vdd vss vout vp vout ib en opamp
-V1 vdd 0 pulse(0 {vvdd} 0 {tr} 1u 1 2)
+V1 vdd 0 {vvdd}
 V2 vss 0 0
-V3 en 0 {vvdd}
+V3 en 0 pulse(0 {vvdd} {td} {tr} 1u 1 2)
 V4 vp 0 {vvdd/2}
 I0 ib 0 5u
 CL vout 0 10p
 **** begin user architecture code
 
 
-*.include opamp_startup_tt.sp
-*.include opamp_startup_ss.sp
-.include opamp_startup_ff.sp
+*.include opamp_enable_tt.sp
+*.include opamp_enable_ss.sp
+.include opamp_enable_ff.sp
 
 
 **** end user architecture code
