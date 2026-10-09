@@ -79,8 +79,45 @@ Keep $M_1$, $M_2$ in moderate inversion, Select  $(\frac{g_m}{I_D})_{1,2}\approx
 
 6. DC gain check
 
+$$A_V=A_{V1}\times A_{V2}=\left[\left(\frac{g_{m1}}{I_{D1}}\right) \left(\frac{g_{ds1}}{I_{D1}}+\frac{g_{ds3}}{I_{D1}}\right)^{-1}\right] \left[\left(\frac{g_{m6}}{I_{D6}}\right) \left(\frac{g_{ds6}}{I_{D6}}+\frac{g_{ds7}}{I_{D6}}\right)^{-1}\right]$$
 
+Since $\frac{g_m}{I_D} \propto \frac{1}{\lambda V_{DS}} \propto \frac{1}{L}$
 
+* Select L > $L_{min}$
+* Check lookup table, select $\frac{g_m}{g_{ds}}\ge 35-40$ per stage
 
+### Transistor size Matrix
+Once $\frac{g_m}{I_D}$, $I_D$, L are fixed extract $\frac{I_D}{W} from table
 
+$$ W=\frac{I_D}{J_D\left(\frac{g_m}{I_D},L\right)}$$
 
+where $J_D=\frac{I_D}{W}$
+
+|Transistor   |  MOS type   |Target $\frac{g_m}{I_D}$ ($V^{-1}$)  |   $I_D$ ($\mu A$)  |   L ($\mu m$)   |
+|:-----------:|:-----------:|------------------------------------:|:------------------:|:---------------:|
+|$M_1,M_2$    |   PMOS      |  12-15                              |    5               |       0.6       |
+|$M_3,M_4$    |   NMOS      |  08-10                              |    5               |       1.0       |
+|$M_5$        |   PMOS      |  10-12                              |    10              |       1.0       |
+|$M_6$        |   NMOS      |  10-12                              |    60              |       0.6       |
+|$M_5$        |   PMOS      |  10-12                              |    60              |       1.0       |
+
+### Transistor sizing
+1. $M_1,M_2$
+                                                                                  
+From $\frac{I_D}{W}$ vs  $\frac{g_m}{I_D}$ plot, for the selected  $\frac{g_m}{I_D}$,
+
+$$\frac{I_D}{W}=2\times 10^5$$
+
+$$\frac{5}{W}=2\times10^5$$
+
+\boxed{$$W_{1,2}=25\mu m$$}
+
+2. $M_3,M_4$
+                                                                                  
+From $\frac{I_D}{W}$ vs  $\frac{g_m}{I_D}$ plot, for the selected  $\frac{g_m}{I_D}$,
+
+$$\frac{I_D}{W}=7\times 10^6$$
+
+$$\frac{5}{W}=7\times10^6$$
+
+$$W_{3,4}=0.7\mu m$$
