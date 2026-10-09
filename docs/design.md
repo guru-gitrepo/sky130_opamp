@@ -77,6 +77,7 @@ $$V_{in,min}=V_{ds3}+|V_{gs1}|=V_{dssat3}+|V_{tp1}|+V_{dssat1}$$
 
 Keep $M_1$, $M_2$ in moderate inversion, Select  $(\frac{g_m}{I_D})_{1,2}\approx 12-15$.
 
+6. DC gain check
 
 
 
